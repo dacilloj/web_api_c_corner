@@ -1,3 +1,6 @@
+using DataAccessEF.Repository;
+using Microsoft.EntityFrameworkCore;
+
 namespace web_api_c_corner
 {
     public class Program
@@ -7,7 +10,7 @@ namespace web_api_c_corner
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddDbContext<PeopleContext>(options => options.UseSqlServer("Default"));
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
