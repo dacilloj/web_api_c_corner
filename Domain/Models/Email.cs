@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    internal class Email
+    public class Email
     {
+        public int EmailId
+        {
+            get;
+            set;
+        }
+        public string EmailAdress
+        {
+            get;
+            set;
+        }
     }
 }
