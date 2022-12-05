@@ -12,7 +12,7 @@ namespace Domain.Models
         {
             get;
             set;
-        } = "";
+        }
         public string EmailAdress
         {
             get;
